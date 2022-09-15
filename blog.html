@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typing Speed Monster</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap" rel="stylesheet" />
+    <!-- bootstrap CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!--  -->
+</head>
+
+<body>
+    <!-- header start -->
+    <!-- nav start -->
+    <nav class="navbar navbar-expand">
+        <div class="container text-center">
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold text-white fs-4 " href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active fw-bold text-info fs-4 " href="blog.html">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav end -->
+    <!-- header end -->
+<!-- accordination section start -->
+<section>
+<div class="accordion" id="accordionPanelsStayOpenExample">
+    <!-- answer 01 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne">
+                What is the difference between Local Storage & Session Storage?
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+           <strong><i>“The Storage interface of the Web Storage API provides access to a particular domain's session or local storage. It
+        allows, for example, the addition, modification, or deletion of stored data items.”</i></strong>
+            
+        <strong>localStorage</strong> and <strong>sessionStorage</strong> are almost the same. Both have the following rules:
+            
+            They store key/value pairs for a particular domain.
+            The values stored may only be strings.
+            They have a limit of around 5MB of storage space.
+            The one major difference between localStorage and sessionStorage is the expiration date.
+            
+            <strong>localStorage</strong> persists the storage across browser sessions. So even if the domain is opened in a new tab, or the browser
+            is closed and reopened, the storage is saved. There is no expiration.
+            <strong>sessionStorage</strong> is cleared when the page session ends. A page session lasts as long as the tab or the browser is open.
+            Therefore, when you open a new tab or a new window, this creates a new session and new storage.
+            </div>
+        </div>
+    </div>
+<!-- answer 02 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                What is the difference between Global Scope & Block Scope in JavaScript??
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+                In a browser environment, the global scope is controlled by the window object while in Node. js, it's controlled by the
+                global object. Block scopes are what you get when you use if statements, for statements, and the like.
+
+            </div>
+        </div>
+    </div>
+    <!-- answer 03 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree">
+            How does the Event-Loop works in JavaScript?
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+            <strong><i>Execution Workflow:</i></strong>
+            Events, timers, Ajax requests are all provided on the client-side by the browsers and are often referred to as Web API.
+            They are the ones that allow the single-threaded JavaScript to be non-blocking, concurrent, and asynchronous! But how?
+            
+            There are three major sections to the execution workflow of any JavaScript program, the call stack, the web API, and the
+            Task queue.
+            
+            <strong>The Call Stack:</strong>
+            A stack is a data structure in which the last element added is always the first to be removed from the stack, you could
+            think of it as a stack of a plate in which only the first plate which was the last added can be removed first. A Call
+            Stack is simply nothing but a stack data structure where tasks or code is being executed accordingly.
+            
+            Let's consider the below example;
+            
+            
+            Source : <code><link rel="stylesheet" href="https://youtu.be/8aGhZQkoFbQ">https://youtu.be/8aGhZQkoFbQ</code>
+            When you call the function printSquare() , it is pushed onto the call stack, the printSquare() function calls the
+            square() function. The square() function is pushed onto the stack and also calls the multiply() function. The multiply
+            function is pushed onto the stack. Since the multiply function returns and is the last thing that was pushed to the
+            stack, its get resolved first and is removed from the stack, followed by the square() function and then the
+            printSquare() function.
+            
+            <strong>The Web API:</strong>
+            This is where code that isn't handled by the V8 engine is executed to not “block” the main execution thread. When the
+            Call Stack encounters a web API function, the process is immediately handed over to the Web API, where it is being
+            executed and freeing the Call Stack to perform other operations during its execution.
+            
+            Let's go back to our setTimeout example above;
+            
+            When we run the code, the first console.log line gets pushed to the stack and we get our output almost immediately, on
+            getting to the timeout, timers are handled by browser and aren't a part of V8's core implementation, it's get pushed to
+            the Web API instead, freeing the stack so it could perform other operations.
+            
+            While the timeout is still running, the stack goes ahead to the next line of action and runs the last console.log, which
+            explains why we get that outputted before the timer output. Once the timer is completed, something happens. The
+            console.log in then timer magically appears in the call stack again!
+            
+           <strong>How?</strong>
+            
+           <strong>The Event Loop:</strong>
+            Before we discuss the event loop, lets first go through the function of the task queue.
+            
+            Back to our timeout example, once the Web API finishes executing the task, it doesn't just push it back to the Call
+            Stack automatically. It goes to the Task Queue.
+            
+            A queue is a data structure that works on the First in First out principle, so as tasks get pushed into the queue, they
+            get out in that same order. Tasks that have been executed by the Web API's, which are being pushed to the Task Queue,
+            then go back to the Call Stack to get their result printed out.
+            
+            But wait. <strong>WHAT THE HECK IS THE EVENT LOOP???</strong>
+            
+            
+            Source: <code><link rel="stylesheet" href="https://youtu.be/8aGhZQkoFbQ">https://youtu.be/8aGhZQkoFbQ</code>
+            The event loop is a process that waits for the Call Stack to be clear before pushing callbacks from the Task Queue to
+            the Call Stack. Once the Stack is clear, the event loop triggers and checks the Task Queue for available callbacks. If
+            there are any, it pushes it to the Call Stack, waits for the Call Stack to be clear again, and repeats the same process.
+            
+            
+            Source: <code><link rel="stylesheet" href="https://www.quora.com/How-does-an-event-loop-work/answer/Timothy-Maxwell">https://www.quora.com/How-does-an-event-loop-work/answer/Timothy-Maxwell</code>
+            The above diagram demonstrates the basic workflow between the Event Loop and the Task Queue.
+            
+         <strong>Conclusion:</strong>
+            
+            While this is a very basic introduction, the concept of asynchronous programming in JavaScript gives enough insight to
+            clearly understand what is going on under the hood and how JavaScript is able to run concurrently and asynchronously
+            with just a single thread.
+            </div>
+        </div>
+    </div>
+    <!-- answer04 -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree">
+            Undefined in JavaScript...
+            </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+            undefined is a property of the global object. That is, it is a variable in global scope. The initial value of undefined
+            is the primitive value undefined.
+            
+            In all non-legacy browsers, undefined is a non-configurable, non-writable property. (Even when this is not the case,
+            avoid overriding it.)
+            
+            A variable that has not been assigned a value is of type undefined. A method or statement also returns undefined if the
+            variable that is being evaluated does not have an assigned value. A function returns undefined if a value was not
+            returned.
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+<!-- accordination  section  end -->
+
+    <!-- script part -->
+    <script src="./history.js"></script>
+    <script src="./script.js"></script>
+    <!-- bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!--  -->
+<footer>
+    <p class="text-center text-white py-5 ">Copyright 2022 || Mahabub</p>
+</footer>
+</body>
+
+</html>
